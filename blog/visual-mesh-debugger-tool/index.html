@@ -1,140 +1,7 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Jesses Tech Art Folio/blog/visual-mesh-debugger-tool/</title>
-    <meta name="description" content="Jesse&#39;s Tech Art Portfolio and Dev blog">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="all,follow">
-    <meta name="googlebot" content="index,follow,snippet,archive">
-    <link rel="stylesheet" href="https://debug-blog.jolchawa.site/hugo-theme-console/css/terminal-0.7.4.min.css">
-    <link rel="stylesheet" href="https://debug-blog.jolchawa.site/hugo-theme-console/css/animate-4.1.1.min.css">
-    <link rel="stylesheet" href="https://debug-blog.jolchawa.site/hugo-theme-console/css/console.css">
-    
-      
-      <link rel="stylesheet" href="/css/custom.min.09952b04abca7d9532ac7f1a4445594b9e1554268181666a22c4668ac0a19a60.css" integrity="sha256-CZUrBKvKfZUyrH8aREVZS54VVCaBgWZqIsRmisChmmA=">
-    
-    
-      <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-      <![endif]-->
-    <link rel="icon" type="image/webp" href="/favicon.webp"><meta property="og:title" content="Visual Mesh Debugger " />
-<meta property="og:description" content="Jesse&#39;s Tech Art Portfolio and Dev blog" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://debug-blog.jolchawa.site/blog/visual-mesh-debugger-tool/" /><meta property="article:published_time" content="2025-04-08T11:58:34+01:00" />
-
-
-
-<meta name="twitter:title" content="Visual Mesh Debugger "/>
-<meta name="twitter:description" content="This post goes through the development of a visual debugging tool using Python for inspecting static meshes in real-time in Unreal Engine."/>
-
-</head>
-<body class="terminal">
-    <div class="container">
-        <div class="terminal-nav">
-          <header class="terminal-logo">
-            <div class="logo terminal-prompt">
-              
-              
-              <a href="https://debug-blog.jolchawa.site/" class="no-style site-name">Jesses Tech Art Folio</a>:~# 
-              <a href='https://debug-blog.jolchawa.site/blog'>blog</a>/<a href='https://debug-blog.jolchawa.site/blog/visual-mesh-debugger-tool'>visual-mesh-debugger-tool</a>/</div></header>
-          <nav class="terminal-menu">
-            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
-                
-                <li property="itemListElement" typeof="ListItem">
-                    <a property="item" typeof="WebPage" href="https://debug-blog.jolchawa.site/blog/">
-                    <span property="name">blog/</span></a>
-                    <meta property="position" content="1" />
-                </li>
-                
-                <li property="itemListElement" typeof="ListItem">
-                    <a property="item" typeof="WebPage" href="https://debug-blog.jolchawa.site/projects/">
-                    <span property="name">projects/</span></a>
-                    <meta property="position" content="2" />
-                </li>
-                
-            </ul>
-          </nav>
-        </div>
-    </div>
-
-    <div class="container animated zoomIn fast" >
-        
-<h1>Visual Mesh Debugger </h1>
-<p>This post goes through the development of a visual debugging tool using Python for inspecting static meshes in real-time in Unreal Engine.</p>
-<figure><img src="/blog/visual-mesh-debugger/1.webp"
-			alt="screenshot of industry brief" style="width: 300px; max-width: 100%; height: auto;">
-</figure>
-
-<p><strong>Quick Intro:</strong></p>
-<p>As its easter break I decided to use the time prior to university starting up again to brush up on my Python knowledge. I have not used Python in some time and have especially neglected using it in my Unreal Engine tools. I want this project to finally beat my addiction to shiny, colorful node networks and divde into the more organised scripting dimension of making tools.</p>
-<p><strong>Brief:</strong></p>
-<p>I will be following a industry brief that details creating a tool over 4 weeks. I will plan my time as following:</p>
-<figure><img src="/blog/visual-mesh-debugger/2.webp"
-			alt="screenshot of industry brief">
-</figure>
-
-<p><strong>Potential Problems:</strong></p>
-<p>Ontop of being heavily rusty with Python and have not used the Python API with Unreal Engine 5, I have a 9-5 for the weekdays. This will affect my available hours so I will be using my weekends to push for completing this brief. Furthermore the university term starts up again on the 28th so that will take out my final Monday entirely, I need to ensure I am fully done with the project well prior to this.</p>
-<p><strong>Brief Essentials:</strong></p>
-<p>I need to ensure I meet the following requirements:</p>
-<ul>
-<li>
-<p>report basic info to user - name, bounding box, tricount, number of materials for each lod, vertex density (number of vertices divided by bounding diameter), number of small triangles (area below 1cm), thin triangles (angle smaller than 15 degrees)</p>
-</li>
-<li>
-<p>have a working user interface for running and presenting results</p>
-</li>
-<li>
-<p>have a method to run across multiple assets - exporting data to csv file</p>
-</li>
-<li>
-<p>document functionality of the tool in user guide</p>
-</li>
-</ul>
-<p><strong>Some stretchgoals I would like to hit are:</strong></p>
-<ul>
-<li>
-<p>evaluation collision</p>
-</li>
-<li>
-<p>excel functionality to bring across problem assets by filtering or formatting</p>
-</li>
-<li>
-<p>written entirely in python or maxscript (maybe one of each)</p>
-</li>
-<li>
-<p>have a video presentation of tool and talkthrough</p>
-</li>
-<li>
-<p>identify number of meshes in scene ~ estimate tricount from here</p>
-</li>
-<li>
-<p>showcase savings from LODS by calculating against original tricount</p>
-</li>
-</ul>
-<p><strong>Sign Off:</strong></p>
-<p>I am quite excited to begin this project and can&rsquo;t wait to learn more about what Python has to offer with Unreal Engines blueprints! Stay tuned</p>
-<hr>
-<p><strong>Date</strong>: 09/04/2025</p>
-<p><strong>Planning and Setup:</strong></p>
-<p>To begin my project I setup Visual Studio Code with Nils Sodermans useful editor based plugin. I followed the following two tutorials to help set this up correctly.</p>
-<p><strong>Flowchart of Logic:</strong></p>
-<figure><img src="/blog/visual-mesh-debugger/3.webp"
-			alt="flowchart" style="width: 300px; max-width: 100%; height: auto;">
-</figure>
-
-<p>Here is a flowchart showcasing a high level overview of input and how that leads to data being gathered. I have also outlined what variables I will need to process to help meet the brief and make the tool more useful to use. I want to have one big master button that gathers this data and another to export to keep it simple. I can add more buttons to help tweak the data too for adjusting screensizes, mesh selected and more however it would still follow this graph.</p>
-<hr>
-<p><strong>Date</strong>: 11/04/2025</p>
-<p><strong>Problems:</strong></p>
-<p>Unfortunately I am quite busier with work than anticipated so I have had less time than ideal to work on the tool. However this is not my core problem as I have had issues with gathering selection with my current Python script. As seen below selection needs to dictate if meshes are being selected in level or editor. I have resolved this with a boolean called Artist Mode. I plan to have this boolean take data from a checkbox or dropdown widget element however for now I need to manually encode what it will do. Furthermore this script does not loop per asset, meaning I cannot export data out. I will need to loop this function per each select item in array to fix this. However the script gathers all my necessary variables in a very crude print line. So paste it into your Editor if you&rsquo;d like to check it out!</p>
-
-<details>
-	<summary>Click to view code</summary>
-	<pre tabindex="0"><code>import unreal
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>Jesses Tech Art Folio/blog/visual-mesh-debugger-tool/</title><meta name=description content="Jesse's Tech Art Portfolio and Dev blog"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><link rel=stylesheet href=https://debug-blog.jolchawa.site/hugo-theme-console/css/terminal-0.7.4.min.css><link rel=stylesheet href=https://debug-blog.jolchawa.site/hugo-theme-console/css/animate-4.1.1.min.css><link rel=stylesheet href=https://debug-blog.jolchawa.site/hugo-theme-console/css/console.css><link rel=stylesheet href=/css/custom.min.0d6066dc303cb7e654f3063d04e5927f7902c5014851b8fd11b54939a29131d3.css integrity="sha256-DWBm3DA8t+ZU8wY9BOWSf3kCxQFIUbj9EbVJOaKRMdM="><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=icon type=image/webp href=/favicon.webp><meta property="og:title" content="Visual Mesh Debugger "><meta property="og:description" content="Jesse's Tech Art Portfolio and Dev blog"><meta property="og:type" content="article"><meta property="og:url" content="https://debug-blog.jolchawa.site/blog/visual-mesh-debugger-tool/"><meta property="article:published_time" content="2025-04-08T11:58:34+01:00"><meta name=twitter:title content="Visual Mesh Debugger "><meta name=twitter:description content="This post goes through the development of a visual debugging tool using Python for inspecting static meshes in real-time in Unreal Engine."></head><body class=terminal><div class=container><div class=terminal-nav><header class=terminal-logo><div class="logo terminal-prompt"><a href=https://debug-blog.jolchawa.site/ class="no-style site-name">Jesses Tech Art Folio</a>:~#
+<a href=https://debug-blog.jolchawa.site/blog>blog</a>/<a href=https://debug-blog.jolchawa.site/blog/visual-mesh-debugger-tool>visual-mesh-debugger-tool</a>/</div></header><nav class=terminal-menu><ul vocab="https://schema.org/" typeof="BreadcrumbList"><li property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href=https://debug-blog.jolchawa.site/blog/><span property="name">blog/</span></a>
+<meta property="position" content="1"></li><li property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href=https://debug-blog.jolchawa.site/projects/><span property="name">projects/</span></a>
+<meta property="position" content="2"></li></ul></nav></div></div><div class="container animated zoomIn fast"><h1>Visual Mesh Debugger</h1><p>This post goes through the development of a visual debugging tool using Python for inspecting static meshes in real-time in Unreal Engine.</p><figure><img src=/blog/visual-mesh-debugger/1.webp alt="screenshot of industry brief" style=width:300px;max-width:100%;height:auto></figure><p><strong>Quick Intro:</strong></p><p>As its easter break I decided to use the time prior to university starting up again to brush up on my Python knowledge. I have not used Python in some time and have especially neglected using it in my Unreal Engine tools. I want this project to finally beat my addiction to shiny, colorful node networks and divde into the more organised scripting dimension of making tools.</p><p><strong>Brief:</strong></p><p>I will be following a industry brief that details creating a tool over 4 weeks. I will plan my time as following:</p><figure><img src=/blog/visual-mesh-debugger/2.webp alt="screenshot of industry brief"></figure><p><strong>Potential Problems:</strong></p><p>Ontop of being heavily rusty with Python and have not used the Python API with Unreal Engine 5, I have a 9-5 for the weekdays. This will affect my available hours so I will be using my weekends to push for completing this brief. Furthermore the university term starts up again on the 28th so that will take out my final Monday entirely, I need to ensure I am fully done with the project well prior to this.</p><p><strong>Brief Essentials:</strong></p><p>I need to ensure I meet the following requirements:</p><ul><li><p>report basic info to user - name, bounding box, tricount, number of materials for each lod, vertex density (number of vertices divided by bounding diameter), number of small triangles (area below 1cm), thin triangles (angle smaller than 15 degrees)</p></li><li><p>have a working user interface for running and presenting results</p></li><li><p>have a method to run across multiple assets - exporting data to csv file</p></li><li><p>document functionality of the tool in user guide</p></li></ul><p><strong>Some stretchgoals I would like to hit are:</strong></p><ul><li><p>evaluation collision</p></li><li><p>excel functionality to bring across problem assets by filtering or formatting</p></li><li><p>written entirely in python or maxscript (maybe one of each)</p></li><li><p>have a video presentation of tool and talkthrough</p></li><li><p>identify number of meshes in scene ~ estimate tricount from here</p></li><li><p>showcase savings from LODS by calculating against original tricount</p></li></ul><p><strong>Sign Off:</strong></p><p>I am quite excited to begin this project and can&rsquo;t wait to learn more about what Python has to offer with Unreal Engines blueprints! Stay tuned</p><hr><p><strong>Date</strong>: 09/04/2025</p><p><strong>Planning and Setup:</strong></p><p>To begin my project I setup Visual Studio Code with Nils Sodermans useful editor based plugin. I followed the following two tutorials to help set this up correctly.</p><p><strong>Flowchart of Logic:</strong></p><figure><img src=/blog/visual-mesh-debugger/3.webp alt=flowchart style=width:300px;max-width:100%;height:auto></figure><p>Here is a flowchart showcasing a high level overview of input and how that leads to data being gathered. I have also outlined what variables I will need to process to help meet the brief and make the tool more useful to use. I want to have one big master button that gathers this data and another to export to keep it simple. I can add more buttons to help tweak the data too for adjusting screensizes, mesh selected and more however it would still follow this graph.</p><hr><p><strong>Date</strong>: 11/04/2025</p><p><strong>Problems:</strong></p><p>Unfortunately I am quite busier with work than anticipated so I have had less time than ideal to work on the tool. However this is not my core problem as I have had issues with gathering selection with my current Python script. As seen below selection needs to dictate if meshes are being selected in level or editor. I have resolved this with a boolean called Artist Mode. I plan to have this boolean take data from a checkbox or dropdown widget element however for now I need to manually encode what it will do. Furthermore this script does not loop per asset, meaning I cannot export data out. I will need to loop this function per each select item in array to fix this. However the script gathers all my necessary variables in a very crude print line. So paste it into your Editor if you&rsquo;d like to check it out!</p><details><summary>Click to view code</summary><pre tabindex=0><code>import unreal
 import datetime
 
 ##gets date time for my debug log printing
@@ -296,46 +163,8 @@ elif amountofitems2&gt;0 and artistmode==True:
 
 else:
     print(&#34;empty no selection!&#34;)
-</code></pre></details>
-
-<p><strong>Improvements to Apply:</strong></p>
-<p>As spoken about earlier the script does not loop per selected asset. This is a easy fix that I plan to go through each array item with a counter and export this data in some form. My greatest hurdle is the .csv format as I have never worked with writing to .CSV before so I do not know how I should package my data from selection to be read. I assume it will most likely be string, so I may need to make a large string or string array to collection each selection. However I will need to do more research into this before I test it out.</p>
-<p>Furthermore a critical bug I have had is inconsistency with the collision detection. No matter what I change in the static mesh editor, meshes in any mode refuse to display correct collision enabled or disabled. The type is easily obtained but I am at a loss at what is wrong especially since the in engine collision viewmode is displaying correctly? So it must be something to do with Python. I will do my best to resolve this however in the essence of time I may leave this till the end as it is not tool breaking.</p>
-<p>Issue shown below:
-<figure><img src="/blog/visual-mesh-debugger/4.gif"
-			alt="screenshot of industry brief"><figcaption>
-			<p>Collision viewport working however the tool disregards this</p>
-		</figcaption>
-</figure>
-</p>
-<p><strong>UI Designing:</strong></p>
-<p>Since I have figured out what data I moved onto designing a UI, for inspiration I looked to Nina Klos&rsquo;s most recent tool project.
-What I loved most about it is how clean and easy to read the setup is alongside being docked nicely in the left corner of the viewport. The thumbnail also made it easy to tell which asset was inspected which I never knew you could do before, super awesome work. So I took a screenshot of my own viewport and began to draft a concept layout below.</p>
-<figure><a href="https://ninaklos.com/"><img src="/blog/visual-mesh-debugger/5.webp"
-			alt="Nina Klos&#39;s Blueprint Utility Widget"></a>
-</figure>
-
-<p>LOD Tool UI Draft 1.0</p>
-<p>There was a <em>lot</em> of variables I would need to display so to makeit easier I plan to have the categories become collapsable or scrollable as I have done with widgets in the past. I ranked the parameters by what is needed most, making the name, location, tricounts, scale etc appear at the top. Then further down more LOD settings would appear ending with the CSV export button. I did not want to incite accidental export presses by grouping a ton of buttons at the top together so by leaving this button last you would really need to commit to the scroll to export out that spreadsheet! Making this menu has also made me realise theres more data I want to include such as instances in scene by counting.</p>
-<p>You may notice a material section which I am on the fence about including as this a focused LOD tool so info on materials may make the scroll longer. I will need to test this further. I also sought some feedback from my peers and they advised that I would need better grouping and buttons included as its quite the info dump at the moment which I will get to when I implement it for real using Unreals Vertical and Horizontal boxes.</p>
-<p><strong>Sign Off:</strong></p>
-<p>Tomorrow I plan to jump onto inserting my script into a widget instead of my remote execution and put my UI design to the test. I&rsquo;m excited as UI is a element I quite enjoy as it feels like sorting pieces of a puzzle together.</p>
-<p><strong>Bibliography:</strong></p>
-<p>Blueprint Utility Widget - Unreal Workflow Tool, Nina Klos 🐟 (2025) ArtStation. Available at: <a href="https://www.artstation.com/artwork/JrJGv0" target="_blank" rel="noopener">https://www.artstation.com/artwork/JrJGv0</a>  (Accessed: 11 April 2025).</p>
-<hr>
-<h2 id="date-13042025">Date: 13/04/2025</h2> 
-<p><strong>Intro to CSV:</strong></p>
-<p>I do not have a lot of time today so I will be exploring csv scripting to get that deliverable met. I found a super useful post from 2023 by Damilola Oladele titled &ldquo;How to Create a CSV File Using Python&rdquo; (Damilola Oladele, 2024) which is exactly to the letter of what I need. It was suprisingly straightforward and it made me realise the true power of Python, you just import a library to fit whatever you need.</p>
-<p>To test it out I rewrote the example script with the data I would need in a header and hit run in the Python terminal. It did not work and I realise that the terminal was not pointing in the correct locaton to send this csv and so I ran it again and behold!</p>
-<figure><img src="/blog/visual-mesh-debugger/6.gif"
-			alt="csv working gif"><figcaption>
-			<p>IT WORKS!! CSV EXPORTED!</p>
-		</figcaption>
-</figure>
-
-<p>As a avid lover of spreadsheets (I even have a enamel pin of Excel thank you Craig!) this literally blew my mind. So many options expanded before me and I know I want to do so much more with this type of script. However it is not complete yet, my largest issue at the moment is that the file path is my default location on C: so it has to be manually moved every run. I can however see a solution by either inputting the directory through paste when prompted or some sort of library that can look through file validation. Either way theres still some polish for this left and then further testing with actual string data that has been pushed through.</p>
-<p><strong>Heres the code:</strong></p>
-<pre tabindex="0"><code>import csv
+</code></pre></details><p><strong>Improvements to Apply:</strong></p><p>As spoken about earlier the script does not loop per selected asset. This is a easy fix that I plan to go through each array item with a counter and export this data in some form. My greatest hurdle is the .csv format as I have never worked with writing to .CSV before so I do not know how I should package my data from selection to be read. I assume it will most likely be string, so I may need to make a large string or string array to collection each selection. However I will need to do more research into this before I test it out.</p><p>Furthermore a critical bug I have had is inconsistency with the collision detection. No matter what I change in the static mesh editor, meshes in any mode refuse to display correct collision enabled or disabled. The type is easily obtained but I am at a loss at what is wrong especially since the in engine collision viewmode is displaying correctly? So it must be something to do with Python. I will do my best to resolve this however in the essence of time I may leave this till the end as it is not tool breaking.</p><p>Issue shown below:<figure><img src=/blog/visual-mesh-debugger/4.gif alt="screenshot of industry brief"><figcaption><p>Collision viewport working however the tool disregards this</p></figcaption></figure></p><p><strong>UI Designing:</strong></p><p>Since I have figured out what data I moved onto designing a UI, for inspiration I looked to Nina Klos&rsquo;s most recent tool project.
+What I loved most about it is how clean and easy to read the setup is alongside being docked nicely in the left corner of the viewport. The thumbnail also made it easy to tell which asset was inspected which I never knew you could do before, super awesome work. So I took a screenshot of my own viewport and began to draft a concept layout below.</p><figure><a href=https://ninaklos.com/><img src=/blog/visual-mesh-debugger/5.webp alt="Nina Klos's Blueprint Utility Widget"></a></figure><p>LOD Tool UI Draft 1.0</p><p>There was a <em>lot</em> of variables I would need to display so to makeit easier I plan to have the categories become collapsable or scrollable as I have done with widgets in the past. I ranked the parameters by what is needed most, making the name, location, tricounts, scale etc appear at the top. Then further down more LOD settings would appear ending with the CSV export button. I did not want to incite accidental export presses by grouping a ton of buttons at the top together so by leaving this button last you would really need to commit to the scroll to export out that spreadsheet! Making this menu has also made me realise theres more data I want to include such as instances in scene by counting.</p><p>You may notice a material section which I am on the fence about including as this a focused LOD tool so info on materials may make the scroll longer. I will need to test this further. I also sought some feedback from my peers and they advised that I would need better grouping and buttons included as its quite the info dump at the moment which I will get to when I implement it for real using Unreals Vertical and Horizontal boxes.</p><p><strong>Sign Off:</strong></p><p>Tomorrow I plan to jump onto inserting my script into a widget instead of my remote execution and put my UI design to the test. I&rsquo;m excited as UI is a element I quite enjoy as it feels like sorting pieces of a puzzle together.</p><p><strong>Bibliography:</strong></p><p>Blueprint Utility Widget - Unreal Workflow Tool, Nina Klos 🐟 (2025) ArtStation. Available at: <a href=https://www.artstation.com/artwork/JrJGv0 target=_blank rel=noopener>https://www.artstation.com/artwork/JrJGv0</a> (Accessed: 11 April 2025).</p><hr><h2 id=date-13042025>Date: 13/04/2025</h2><p><strong>Intro to CSV:</strong></p><p>I do not have a lot of time today so I will be exploring csv scripting to get that deliverable met. I found a super useful post from 2023 by Damilola Oladele titled &ldquo;How to Create a CSV File Using Python&rdquo; (Damilola Oladele, 2024) which is exactly to the letter of what I need. It was suprisingly straightforward and it made me realise the true power of Python, you just import a library to fit whatever you need.</p><p>To test it out I rewrote the example script with the data I would need in a header and hit run in the Python terminal. It did not work and I realise that the terminal was not pointing in the correct locaton to send this csv and so I ran it again and behold!</p><figure><img src=/blog/visual-mesh-debugger/6.gif alt="csv working gif"><figcaption><p>IT WORKS!! CSV EXPORTED!</p></figcaption></figure><p>As a avid lover of spreadsheets (I even have a enamel pin of Excel thank you Craig!) this literally blew my mind. So many options expanded before me and I know I want to do so much more with this type of script. However it is not complete yet, my largest issue at the moment is that the file path is my default location on C: so it has to be manually moved every run. I can however see a solution by either inputting the directory through paste when prompted or some sort of library that can look through file validation. Either way theres still some polish for this left and then further testing with actual string data that has been pushed through.</p><p><strong>Heres the code:</strong></p><pre tabindex=0><code>import csv
 
 rowheaders=[&#34;Mesh Name&#34;,&#34;Folder&#34;, &#34;Instances in Scene&#34;, &#34;Current Tricount&#34;, &#34;Current Vertex Count&#34;, &#34;Total LOD No&#34;, &#34;Material Count&#34;,&#34;Units&#34;,&#34;Scale Info (X,Y,Z)&#34;,&#34;Collision Enabled&#34;, &#34;Collision Type&#34;, &#34;Nanite Enabled&#34;, &#34;LOD, Tricount, Screensize&#34;,&#34;LOD Reduction %&#34;,&#34;Vertex Density per CM&#34;, &#34;Material Names&#34;]
 input_data_from_select=[&#34;just empty now&#34;]
@@ -350,42 +179,7 @@ with open(creating_csv_name, &#39;w&#39;, newline=&#39;&#39;) as file:
     writer.writerow(rowheaders)
     writer.writerow(input_data_from_select)
     print(&#34;successwrote&#34;)
-</code></pre><hr>
-<h2 id="date-15042025">Date: 15/04/2025</h2> 
-<p><strong>UI Development:</strong></p>
-<p>So I have worked hard on getting the UI up and running. Its quite responsive and has a good amount of adjustable buttons and dropdowns to help get more insight on selected assets.</p>
-<figure><img src="/blog/visual-mesh-debugger/7.gif"
-			alt="runtime gif"><figcaption>
-			<p>UI in Runtime</p>
-		</figcaption>
-</figure>
-
-<p>UI in Runtime</p>
-<figure><img src="/blog/visual-mesh-debugger/8.webp"
-			alt="ui breakdown"><figcaption>
-			<p>UI Breakdown</p>
-		</figcaption>
-</figure>
-
-<p>I have adjusted the scrollbox for the screenshot however everything composes neatly into a master vertical box filled with category vertical boxes. To ensure that parameters display well spaced there are several horizontal boxes used to layout data. As mentioned before its quite the overload at the moment so I have worked hard to get collapsable menus working.</p>
-<p><strong>Collapsable Menus:</strong></p>
-<p>As there are a lot of menus I want to collapse I knew I wanted to create a function that could reuse the logic of plugging in a section (vertical box), check if its visible and do the reverse of its state. I&rsquo;m uncertain if this is a bit of a cheat however when looking on the Python api for components I have not talked to before such as the widget tools I try visualise what I need by drafting the logic using Blueprinting.</p>
-<figure><img src="/blog/visual-mesh-debugger/9.webp"
-			alt="ui breakdown"><figcaption>
-			<p>Logic in Blueprint</p>
-		</figcaption>
-</figure>
-
-<p>I then write it out in Python script instead which ends up being a lot more compact than so many several nodes.</p>
-<figure><img src="/blog/visual-mesh-debugger/10.webp"
-			alt="ui breakdown"><figcaption>
-			<p>Logic in Python</p>
-		</figcaption>
-</figure>
-
-<p>I then created a input for the input variable (vertical box) to plugin.</p>
-<p><strong>Python Script for Collapsable Menus</strong></p>
-<pre tabindex="0"><code>import unreal
+</code></pre><hr><h2 id=date-15042025>Date: 15/04/2025</h2><p><strong>UI Development:</strong></p><p>So I have worked hard on getting the UI up and running. Its quite responsive and has a good amount of adjustable buttons and dropdowns to help get more insight on selected assets.</p><figure><img src=/blog/visual-mesh-debugger/7.gif alt="runtime gif"><figcaption><p>UI in Runtime</p></figcaption></figure><p>UI in Runtime</p><figure><img src=/blog/visual-mesh-debugger/8.webp alt="ui breakdown"><figcaption><p>UI Breakdown</p></figcaption></figure><p>I have adjusted the scrollbox for the screenshot however everything composes neatly into a master vertical box filled with category vertical boxes. To ensure that parameters display well spaced there are several horizontal boxes used to layout data. As mentioned before its quite the overload at the moment so I have worked hard to get collapsable menus working.</p><p><strong>Collapsable Menus:</strong></p><p>As there are a lot of menus I want to collapse I knew I wanted to create a function that could reuse the logic of plugging in a section (vertical box), check if its visible and do the reverse of its state. I&rsquo;m uncertain if this is a bit of a cheat however when looking on the Python api for components I have not talked to before such as the widget tools I try visualise what I need by drafting the logic using Blueprinting.</p><figure><img src=/blog/visual-mesh-debugger/9.webp alt="ui breakdown"><figcaption><p>Logic in Blueprint</p></figcaption></figure><p>I then write it out in Python script instead which ends up being a lot more compact than so many several nodes.</p><figure><img src=/blog/visual-mesh-debugger/10.webp alt="ui breakdown"><figcaption><p>Logic in Python</p></figcaption></figure><p>I then created a input for the input variable (vertical box) to plugin.</p><p><strong>Python Script for Collapsable Menus</strong></p><pre tabindex=0><code>import unreal
 
 if categorytocollap.visibility.value !=1:
 
@@ -394,25 +188,7 @@ if categorytocollap.visibility.value !=1:
 else:
 
     categorytocollap.set_visibility(unreal.SlateVisibility.VISIBLE)
-</code></pre><p>My event graph now is clean ad short, looking like this:</p>
-<figure><img src="/blog/visual-mesh-debugger/11.webp"
-			alt="On Pressed to Hide Functionn" style="width: 500px; max-width: 100%; height: auto;"><figcaption>
-			<p>On Pressed to Hide Functiont</p>
-		</figcaption>
-</figure>
-
-<p>And the grand finale, behold it working in engine!</p>
-<figure><img src="/blog/visual-mesh-debugger/12.gif"
-			alt="Menu Hide Working in Realtime"><figcaption>
-			<p>Menu Hide Working in Realtime</p>
-		</figcaption>
-</figure>
-
-<p><strong>Thumbnail and Level Dropdown Execution:</strong></p>
-<p>So to start off I knew I needed a way to isolate if the user is selecting in Level or Content Browser as it basically makes or breaks the way select static mesh needs to respond ie cleaning up the selection for only static meshes or prevent selecting non static meshes. I tested out a bit of isolated code to see if I can get a input dropdown index value and use that in if else statements.</p>
-<p>Furthermore I wanted visual confirmation that yes I did select the asset it was telling me I selected so this would be done in the way of sending this asset data to the thumbnail. Here is my codes:</p>
-<p><strong>Dropdown Selection in Python</strong></p>
-<pre tabindex="0"><code>
+</code></pre><p>My event graph now is clean ad short, looking like this:</p><figure><img src=/blog/visual-mesh-debugger/11.webp alt="On Pressed to Hide Functionn" style=width:500px;max-width:100%;height:auto><figcaption><p>On Pressed to Hide Functiont</p></figcaption></figure><p>And the grand finale, behold it working in engine!</p><figure><img src=/blog/visual-mesh-debugger/12.gif alt="Menu Hide Working in Realtime"><figcaption><p>Menu Hide Working in Realtime</p></figcaption></figure><p><strong>Thumbnail and Level Dropdown Execution:</strong></p><p>So to start off I knew I needed a way to isolate if the user is selecting in Level or Content Browser as it basically makes or breaks the way select static mesh needs to respond ie cleaning up the selection for only static meshes or prevent selecting non static meshes. I tested out a bit of isolated code to see if I can get a input dropdown index value and use that in if else statements.</p><p>Furthermore I wanted visual confirmation that yes I did select the asset it was telling me I selected so this would be done in the way of sending this asset data to the thumbnail. Here is my codes:</p><p><strong>Dropdown Selection in Python</strong></p><pre tabindex=0><code>
 if dropdowncheck.get_selected_index()!=0: #content browser
     print(&#34;not empty!&#34;)
     print(&#34;i have selected &#34;+str(amountofitems)+&#34; items in the content browser!&#34;)
@@ -426,16 +202,10 @@ elif dropdowncheck.get_selected_index()!=1: #level
 
 else: #no selection
     print(&#34;empty no selection!&#34;)
-</code></pre><p><strong>Getting Thumbnail Content Browser</strong></p>
-<pre tabindex="0"><code>import unreal
+</code></pre><p><strong>Getting Thumbnail Content Browser</strong></p><pre tabindex=0><code>import unreal
 selectionnow=unreal.EditorUtilityLibrary.get_selected_asset_data() 
 asset_data_for_thumb=asset_data_for_thumb[0]
-</code></pre><p>And heres how it runs in combination with my other script.</p>
-<p>So I have a slew of a few issues with gathering thumbnails in level I suspect this may be due to it needing to dig deeper to call the asset data value. However the remainder of the script runs well! And it prints all the info the output log. This is not ideal, I do want it to project it onto the UI so that would be my next step by hooking up a ton of inputs like I did for my hide python function.</p>
-
-<details>
-	<summary>Click to view code</summary>
-	<pre tabindex="0"><code>import unreal
+</code></pre><p>And heres how it runs in combination with my other script.</p><p>So I have a slew of a few issues with gathering thumbnails in level I suspect this may be due to it needing to dig deeper to call the asset data value. However the remainder of the script runs well! And it prints all the info the output log. This is not ideal, I do want it to project it onto the UI so that would be my next step by hooking up a ton of inputs like I did for my hide python function.</p><details><summary>Click to view code</summary><pre tabindex=0><code>import unreal
 import datetime
 
 ##gets date time for my debug log printing
@@ -601,26 +371,7 @@ elif dropdowncheck.get_selected_index()!=1: #level
 
 else: #no selection
     print(&#34;empty no selection!&#34;)
-</code></pre></details>
-
-<hr>
-<h2 id="date-18042025">Date: 18.04.2025**</h2> 
-<p><strong>Setting UI Values Works!</strong></p>
-<p>I jumped out of my seat when this finally worked as the amount of time fiddling with inputs felt like forever to ensure all the values were set correctly. However I&rsquo;m happy to report all printed data is now set in a clean manner up on the widget itself. Heres a video:</p>
-<p>Data Set on UI from Python</p>
-<p>Heres how the spaghetti looks under the hood:</p>
-<p><figure><img src="/blog/visual-mesh-debugger/13.webp"
-			alt="So much blue its a ocean of spaghetti" style="width: 700px; max-width: 100%; height: auto;"><figcaption>
-			<p>So much blue its a ocean of spaghetti</p>
-		</figcaption>
-</figure>
-
-Whilst it does not look pretty it certainly works! I know one big future aspect I want to work on is my naming conventions, it ended up causing so many issues mispelling, figuring out if I was talking to the the text component or string however for the sake of time it is what it is.</p>
-<p><strong>Progress of Code - Its really long now be warned</strong>
-
-<details>
-	<summary>Click to view code</summary>
-	<pre tabindex="0"><code>import unreal
+</code></pre></details><hr><h2 id=date-18042025>Date: 18.04.2025**</h2><p><strong>Setting UI Values Works!</strong></p><p>I jumped out of my seat when this finally worked as the amount of time fiddling with inputs felt like forever to ensure all the values were set correctly. However I&rsquo;m happy to report all printed data is now set in a clean manner up on the widget itself. Heres a video:</p><p>Data Set on UI from Python</p><p>Heres how the spaghetti looks under the hood:</p><p><figure><img src=/blog/visual-mesh-debugger/13.webp alt="So much blue its a ocean of spaghetti" style=width:700px;max-width:100%;height:auto><figcaption><p>So much blue its a ocean of spaghetti</p></figcaption></figure>Whilst it does not look pretty it certainly works! I know one big future aspect I want to work on is my naming conventions, it ended up causing so many issues mispelling, figuring out if I was talking to the the text component or string however for the sake of time it is what it is.</p><p><strong>Progress of Code - Its really long now be warned</strong><details><summary>Click to view code</summary><pre tabindex=0><code>import unreal
 import datetime
 
 ##gets date time for my debug log printing
@@ -875,23 +626,7 @@ elif dropdowncheck.get_selected_index()!=1: #level
 
 else: #no selection
     print(&#34;empty no selection!&#34;)
-</code></pre></details>
-</p>
-<p><strong>Fixing Missing Thumbnail on Start:</strong></p>
-<p>One issue I had was the tool had no thumbnail to select at the start of construction. I ended up going with the most foolproof option of selecting a engine cube since that asset always exists. Heres how it looks plus the code:</p>
-<figure><img src="/blog/visual-mesh-debugger/14.gif"
-			alt="Empty to Default Cube Thumbnail on Construct"><figcaption>
-			<p>Empty to Default Cube Thumbnail on Construct</p>
-		</figcaption>
-</figure>
-
-<figure><img src="/blog/visual-mesh-debugger/15.webp"
-			alt="How code is plugged in"><figcaption>
-			<p>How code is plugged in</p>
-		</figcaption>
-</figure>
-
-<pre tabindex="0"><code>import unreal
+</code></pre></details></p><p><strong>Fixing Missing Thumbnail on Start:</strong></p><p>One issue I had was the tool had no thumbnail to select at the start of construction. I ended up going with the most foolproof option of selecting a engine cube since that asset always exists. Heres how it looks plus the code:</p><figure><img src=/blog/visual-mesh-debugger/14.gif alt="Empty to Default Cube Thumbnail on Construct"><figcaption><p>Empty to Default Cube Thumbnail on Construct</p></figcaption></figure><figure><img src=/blog/visual-mesh-debugger/15.webp alt="How code is plugged in"><figcaption><p>How code is plugged in</p></figcaption></figure><pre tabindex=0><code>import unreal
 cube_mesh = unreal.load_asset(&#34;/Engine/BasicShapes/Cube&#34;)
 
 datapath=cube_mesh.get_path_name()
@@ -899,66 +634,7 @@ datapath=cube_mesh.get_path_name()
 data_for_thumb = unreal.EditorAssetLibrary.find_asset_data(datapath)
 
 asset_thumb.set_asset(data_for_thumb)
-</code></pre><hr>
-<p><strong>Reflection</strong></p>
-<p>I am running quite behind on my tool at the moment, according to my schedule I should be on documentation. However I need to still tackle the following things:</p>
-<ul>
-<li>
-<p>CSV Export from selected data</p>
-</li>
-<li>
-<p>Folder location input somehow</p>
-</li>
-<li>
-<p>Lot of missing functionality from buttons like update screen size or selected item dropdown</p>
-</li>
-<li>
-<p>Some of the default text is weird like verts on tris etc needs updating</p>
-</li>
-</ul>
-<p><strong>Sign Off:</strong></p>
-<p>For the essence of time I will be focusing on functionality and the core aspects such as the exporting. I may need to cut some options such as the dropdown index selection or adjustments however they can always be added later, its time to focus on the fundamentals features.</p>
-<hr>
-<h2 id="20-23042025">20-23.04.2025</h2> 
-<p><strong>So much work, so little time</strong></p>
-<p>I decided to really focus over the past few days to update, fix and get elements functional heres all the work.</p>
-<p><strong>Rewrite for Clean Looping</strong></p>
-<p>I decided to export the data across to my CSV it should be ammended into a string array. My initial approach was a bit nightmareish, I decided to just copy and paste my code, removing the set data and cleaning it up to focus on a good string export. This ended up predictably, doubling my line count to 475 lines.</p>
-<figure><img src="/blog/visual-mesh-debugger/16.webp"
-			alt="Not good, time to rewrite" style="width: 400px; max-width: 100%; height: auto;"><figcaption>
-			<p>Not good, time to rewrite</p>
-		</figcaption>
-</figure>
-
-<p>So my rewritten and final code looks like this (and is only 275 lines!)</p>
-<p><strong>UI Update</strong></p>
-<p>I got some feedback from my peers that the UI is quite barebones at the minute and could do with some splashes of color to distinguish core buttons. The menus being hideable were also not clear at all and a lot of data was centred which looked off. So I went to work quickly redesigning it and implementing a refresh.</p>
-<figure><img src="/blog/visual-mesh-debugger/17.webp"
-			alt="Photoshop Edit"><figcaption>
-			<p>Photoshop Edit</p>
-		</figcaption>
-</figure>
-
-<hr>
-<p><strong>In Engine Preview:</strong></p>
-<p>Engine Preview New UI Revamp</p>
-<p>I quite like how the borders split up data and after showcasing it back to my peers they have mixed opinions. On one hand some of them like the colors and some of them dislike the amount so I may simplify this to shades in the future. However the borders have been a brillaint success alongside my written tooltips explaining a bit more of how elements are calculated.</p>
-<p><strong>Exporting Data from Selected String using Categories</strong></p>
-<p>I figured out via counting that my total string array would be 17 entries per row, so using this figure I could divide a total length of a array to figure out how many lines to write.</p>
-<p>If the array is for example 34 in length this means there are two rows or two different selected objects to write.</p>
-<p>From this I could also isolate not to write a row if not selected in the checklist via the popping command.</p>
-<p><strong>Screenshot of me counting and removing unused string headers</strong></p>
-<figure><img src="/blog/visual-mesh-debugger/18.webp">
-</figure>
-
-<p>I ended up encountering some problems initially as I made it only count to 16 which ended up cutting off the material count as I mistook the value 0 for not counted.</p>
-<p><strong>Here it is finally working!</strong></p>
-<p>Exporting all, none or select categories to .CSV</p>
-<p>Code below for you to try, hook it up to UI element to check from in inputs alongside a string array to go into it.</p>
-
-<details>
-	<summary>Click to view code</summary>
-	<pre tabindex="0"><code>import csv
+</code></pre><hr><p><strong>Reflection</strong></p><p>I am running quite behind on my tool at the moment, according to my schedule I should be on documentation. However I need to still tackle the following things:</p><ul><li><p>CSV Export from selected data</p></li><li><p>Folder location input somehow</p></li><li><p>Lot of missing functionality from buttons like update screen size or selected item dropdown</p></li><li><p>Some of the default text is weird like verts on tris etc needs updating</p></li></ul><p><strong>Sign Off:</strong></p><p>For the essence of time I will be focusing on functionality and the core aspects such as the exporting. I may need to cut some options such as the dropdown index selection or adjustments however they can always be added later, its time to focus on the fundamentals features.</p><hr><h2 id=20-23042025>20-23.04.2025</h2><p><strong>So much work, so little time</strong></p><p>I decided to really focus over the past few days to update, fix and get elements functional heres all the work.</p><p><strong>Rewrite for Clean Looping</strong></p><p>I decided to export the data across to my CSV it should be ammended into a string array. My initial approach was a bit nightmareish, I decided to just copy and paste my code, removing the set data and cleaning it up to focus on a good string export. This ended up predictably, doubling my line count to 475 lines.</p><figure><img src=/blog/visual-mesh-debugger/16.webp alt="Not good, time to rewrite" style=width:400px;max-width:100%;height:auto><figcaption><p>Not good, time to rewrite</p></figcaption></figure><p>So my rewritten and final code looks like this (and is only 275 lines!)</p><p><strong>UI Update</strong></p><p>I got some feedback from my peers that the UI is quite barebones at the minute and could do with some splashes of color to distinguish core buttons. The menus being hideable were also not clear at all and a lot of data was centred which looked off. So I went to work quickly redesigning it and implementing a refresh.</p><figure><img src=/blog/visual-mesh-debugger/17.webp alt="Photoshop Edit"><figcaption><p>Photoshop Edit</p></figcaption></figure><hr><p><strong>In Engine Preview:</strong></p><p>Engine Preview New UI Revamp</p><p>I quite like how the borders split up data and after showcasing it back to my peers they have mixed opinions. On one hand some of them like the colors and some of them dislike the amount so I may simplify this to shades in the future. However the borders have been a brillaint success alongside my written tooltips explaining a bit more of how elements are calculated.</p><p><strong>Exporting Data from Selected String using Categories</strong></p><p>I figured out via counting that my total string array would be 17 entries per row, so using this figure I could divide a total length of a array to figure out how many lines to write.</p><p>If the array is for example 34 in length this means there are two rows or two different selected objects to write.</p><p>From this I could also isolate not to write a row if not selected in the checklist via the popping command.</p><p><strong>Screenshot of me counting and removing unused string headers</strong></p><figure><img src=/blog/visual-mesh-debugger/18.webp></figure><p>I ended up encountering some problems initially as I made it only count to 16 which ended up cutting off the material count as I mistook the value 0 for not counted.</p><p><strong>Here it is finally working!</strong></p><p>Exporting all, none or select categories to .CSV</p><p>Code below for you to try, hook it up to UI element to check from in inputs alongside a string array to go into it.</p><details><summary>Click to view code</summary><pre tabindex=0><code>import csv
 import os
 from pathlib import Path
 
@@ -1033,24 +709,7 @@ with open(filepath, &#39;w&#39;, newline=&#39;&#39;) as file:
         writer.writerow(currentadd)
         addcounter+=1
         print(str(addcounter))
-</code></pre></details>
-
-<p><strong>Folder Selection:</strong></p>
-<p>I knew I wanted the user to choose the folder to export to so I did some research and found a brilliant library called Tkinter (geeksforgeeks, 2020). From the post I would not need the button as I would be calling it via the on pressed button in Unreal however the remainder of the code would be highly relevant in getting the file path. Heres how it works:</p>
-<figure><img src="/blog/visual-mesh-debugger/19.gif"
-			alt="Folder Select Window"><figcaption>
-			<p>Folder Select Window</p>
-		</figcaption>
-</figure>
-
-<p><strong>Blueprint Overview:</strong></p>
-<figure><img src="/blog/visual-mesh-debugger/20.webp"
-			alt="Connection to CSV Export Script via Stringw"><figcaption>
-			<p>Connection to CSV Export Script via String</p>
-		</figcaption>
-</figure>
-
-<pre tabindex="0"><code>import unreal
+</code></pre></details><p><strong>Folder Selection:</strong></p><p>I knew I wanted the user to choose the folder to export to so I did some research and found a brilliant library called Tkinter (geeksforgeeks, 2020). From the post I would not need the button as I would be calling it via the on pressed button in Unreal however the remainder of the code would be highly relevant in getting the file path. Heres how it works:</p><figure><img src=/blog/visual-mesh-debugger/19.gif alt="Folder Select Window"><figcaption><p>Folder Select Window</p></figcaption></figure><p><strong>Blueprint Overview:</strong></p><figure><img src=/blog/visual-mesh-debugger/20.webp alt="Connection to CSV Export Script via Stringw"><figcaption><p>Connection to CSV Export Script via String</p></figcaption></figure><pre tabindex=0><code>import unreal
 
 ##a easy to use gui interface https://www.geeksforgeeks.org/python3-gui-application-overview/ tkinter
 
@@ -1083,106 +742,6 @@ if selectedfolder:
 else:
 
     filelocation_text.set_text(&#34;Missing! Default to Downloads&#34;)
-</code></pre><p><strong>Sign Off:</strong></p>
-<p>This all for production, I will just need to write up my documentation and my project is finally finished!</p>
-<p><strong>Bibliography:</strong></p>
-<p>geeksforgeeks (2020). File Explorer in Python using Tkinter. [online] GeeksforGeeks. Available at: <a href="https://www.geeksforgeeks.org/file-explorer-in-python-using-tkinter/" target="_blank" rel="noopener">https://www.geeksforgeeks.org/file-explorer-in-python-using-tkinter/</a>  [Accessed 23 Apr. 2025].</p>
-<hr>
-<h2 id="24042025">24.04.2025</h2> 
-<p><strong>Writing Documentation</strong></p>
-<p>As I have never written documentation before this came to be quite the challenging task. I knew what I wanted to state however I knew I would need to brainstorm everything that would be important for using the tool for the first time plus problems that might appear. When designing this documentation I used peer feedback to help strengthen the topics covered which came in quite handy.</p>
-<figure><img src="/blog/visual-mesh-debugger/21.webp"
-			alt="Sample of my LOD page before adding images" style="width: 500px; max-width: 100%; height: auto;"><figcaption>
-			<p>Sample of my LOD page before adding images</p>
-		</figcaption>
-</figure>
-
-<p>I initially wrote everything without pictures to try and put in words as much as possible before adding the pictures as a bonus ontop. I kept functions basic and explanations to the point.</p>
-<p>Heres the final result with a fancy cover too! Download it below!</p>
-<figure><img src="/blog/visual-mesh-debugger/22.webp"
-			alt="Cover for my documentation" style="width: 500px; max-width: 100%; height: auto;"><figcaption>
-			<p>Cover for my documentation</p>
-		</figcaption>
-</figure>
-
-<p>For my cover I used the tool in a sample environment by Quixel Megascans to help get a taste of what it would look like in a full game scene! Its a brilliant and tasty medieveal banquet do check them out below.</p>
-<hr>
-<h2 id="25042025">25.04.2025</h2> 
-<p><strong>Project Renders</strong></p>
-<p>Heres some breakdowns of my blueprint setup and final video showcase of features. As everything is primarily running through scripts my previous days post may be better to preview those elements.</p>
-<p><strong>Full Video Function Showcase:</strong>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-			<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/QNl8j2_PLpQ?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
-		</div>
-</p>
-<p><strong>Breakdown Shots:</strong></p>
-<figure><img src="/blog/visual-mesh-debugger/23.webp"
-			alt="Blueprint Overview"><figcaption>
-			<p>Blueprint Overview</p>
-		</figcaption>
-</figure>
-
-<figure><img src="/blog/visual-mesh-debugger/24.webp"
-			alt="Main LOD Script"><figcaption>
-			<p>Main LOD Script</p>
-		</figcaption>
-</figure>
-
-<figure><img src="/blog/visual-mesh-debugger/25.webp"
-			alt="Folder Selecting"><figcaption>
-			<p>Folder Selecting</p>
-		</figcaption>
-</figure>
-
-<figure><img src="/blog/visual-mesh-debugger/26.webp"
-			alt="Collapsible Menus"><figcaption>
-			<p>Collapsible Menus</p>
-		</figcaption>
-</figure>
-
-<figure><img src="/blog/visual-mesh-debugger/27.webp"
-			alt="Pre Constructon and Link Script"><figcaption>
-			<p>Pre Constructon and Link Script</p>
-		</figcaption>
-</figure>
-
-<figure><img src="/blog/visual-mesh-debugger/28.webp"
-			alt="User Interface"><figcaption>
-			<p>User Interface</p>
-		</figcaption>
-</figure>
-
-<hr>
-<p><strong>Project Post Mortem:</strong></p>
-<p><strong>What Went Well:</strong></p>
-<p>Overall I&rsquo;m quite happy with the tools output and result. Whilst there may be a few bugs with collision remaining the usability is still consistent and simple to pick up. I&rsquo;ve had positive feedback overall and I have learnt quite a lot about python I have not known before. I also feel they this tool is a brilliant template for other widgets I can create that need to utilise UI elements such as a material swapper or mass renamer. I have also been able to implement functions, loops and cut down my code to be quite optimised over the course of my development.</p>
-<p><strong>What Went Wrong:</strong></p>
-<p>As it&rsquo;s my first major python tool I have had numerous issues with elements running, looping, bad syntaxes and missing parameter values near the beginning. However, I have been able to learn from my mistakes and become a lot faster at debugging. On the other hand, the tool is still limited from what I wanted it to achieve in the scope of in engine usability. This includes a drop-down menu to select the assets, ability to adjust screen space or material values on the select asset too. Due to time which again has been another aspect that went quite poorly due to my fulltime job commitments I have had to cut quite a bit. At the end the project still meets what is required for the brief but in the future, I want to add to it, to make it even better than it was before. I also need to break a bad habit pointed out to me by a peer who codes that is my disastrous parameter naming conventions. I had a lot of problems with missing variables due to me not painting the same names through my inputs so in the future I want to break my bad habits and commit to a clearer naming scheme. This would include where it is so if a text element is in the UI it would be UI_Mesh_Name and the input in Python would be Input_UI_Mesh_Name. My only fear would be very long string names so I may also simplify it to what it is for clearer reading such a s vb_Lod_Stats for vertical box lod stats for example. It is quite too late to rewrite now as it would break all my code</p>
-<p><strong>Final reflection:</strong></p>
-<p>In conclusion I would consider this a semi successful project in meeting the brief but leaves enough wiggle room for future upgrades. It was also my first time writing proper documentation which I want to do more of as it was both super fun and super helpful when passing for peer feedback. For my future projects I want to make a few more of these tools using purely python and head into Houdini to bridge the gap into more 3D based procedural tools.</p>
-
-        <div class="footer">
-    
-<div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-    <b>
-        © Jesse Olchawa 2025-<script>document.write(/\d{4}/.exec(Date())[0])</script>
-    </b>
-
-    <img
-        src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fwww.jolchawa.site%2F&label=Website+Visitors+Counter&icon=stars&color=%236ea8fe&message=&style=for-the-badge&tz=GMT"
-        style="width: 300px; height: auto;"
-        alt="Website visitors counter"
-    >
-</div>
-<center>
-    This content website cannot be utilised for any AI training or data gathering purposes!
-    <br>
-</b>
-    This site is powered with <a href="https://gohugo.io/">Hugo</a> using the 
-    <a href="https://github.com/mrmierzejewski/hugo-theme-console/">Console Theme</a>. 
-    </center>
-</div>
-
-    </div>
-  </body>
-</html>
+</code></pre><p><strong>Sign Off:</strong></p><p>This all for production, I will just need to write up my documentation and my project is finally finished!</p><p><strong>Bibliography:</strong></p><p>geeksforgeeks (2020). File Explorer in Python using Tkinter. [online] GeeksforGeeks. Available at: <a href=https://www.geeksforgeeks.org/file-explorer-in-python-using-tkinter/ target=_blank rel=noopener>https://www.geeksforgeeks.org/file-explorer-in-python-using-tkinter/</a> [Accessed 23 Apr. 2025].</p><hr><h2 id=24042025>24.04.2025</h2><p><strong>Writing Documentation</strong></p><p>As I have never written documentation before this came to be quite the challenging task. I knew what I wanted to state however I knew I would need to brainstorm everything that would be important for using the tool for the first time plus problems that might appear. When designing this documentation I used peer feedback to help strengthen the topics covered which came in quite handy.</p><figure><img src=/blog/visual-mesh-debugger/21.webp alt="Sample of my LOD page before adding images" style=width:500px;max-width:100%;height:auto><figcaption><p>Sample of my LOD page before adding images</p></figcaption></figure><p>I initially wrote everything without pictures to try and put in words as much as possible before adding the pictures as a bonus ontop. I kept functions basic and explanations to the point.</p><p>Heres the final result with a fancy cover too! Download it below!</p><figure><img src=/blog/visual-mesh-debugger/22.webp alt="Cover for my documentation" style=width:500px;max-width:100%;height:auto><figcaption><p>Cover for my documentation</p></figcaption></figure><p>For my cover I used the tool in a sample environment by Quixel Megascans to help get a taste of what it would look like in a full game scene! Its a brilliant and tasty medieveal banquet do check them out below.</p><hr><h2 id=25042025>25.04.2025</h2><p><strong>Project Renders</strong></p><p>Heres some breakdowns of my blueprint setup and final video showcase of features. As everything is primarily running through scripts my previous days post may be better to preview those elements.</p><p><strong>Full Video Function Showcase:</strong><div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading=eager referrerpolicy=strict-origin-when-cross-origin src="https://www.youtube.com/embed/QNl8j2_PLpQ?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 title="YouTube video"></iframe></div></p><p><strong>Breakdown Shots:</strong></p><figure><img src=/blog/visual-mesh-debugger/23.webp alt="Blueprint Overview"><figcaption><p>Blueprint Overview</p></figcaption></figure><figure><img src=/blog/visual-mesh-debugger/24.webp alt="Main LOD Script"><figcaption><p>Main LOD Script</p></figcaption></figure><figure><img src=/blog/visual-mesh-debugger/25.webp alt="Folder Selecting"><figcaption><p>Folder Selecting</p></figcaption></figure><figure><img src=/blog/visual-mesh-debugger/26.webp alt="Collapsible Menus"><figcaption><p>Collapsible Menus</p></figcaption></figure><figure><img src=/blog/visual-mesh-debugger/27.webp alt="Pre Constructon and Link Script"><figcaption><p>Pre Constructon and Link Script</p></figcaption></figure><figure><img src=/blog/visual-mesh-debugger/28.webp alt="User Interface"><figcaption><p>User Interface</p></figcaption></figure><hr><p><strong>Project Post Mortem:</strong></p><p><strong>What Went Well:</strong></p><p>Overall I&rsquo;m quite happy with the tools output and result. Whilst there may be a few bugs with collision remaining the usability is still consistent and simple to pick up. I&rsquo;ve had positive feedback overall and I have learnt quite a lot about python I have not known before. I also feel they this tool is a brilliant template for other widgets I can create that need to utilise UI elements such as a material swapper or mass renamer. I have also been able to implement functions, loops and cut down my code to be quite optimised over the course of my development.</p><p><strong>What Went Wrong:</strong></p><p>As it&rsquo;s my first major python tool I have had numerous issues with elements running, looping, bad syntaxes and missing parameter values near the beginning. However, I have been able to learn from my mistakes and become a lot faster at debugging. On the other hand, the tool is still limited from what I wanted it to achieve in the scope of in engine usability. This includes a drop-down menu to select the assets, ability to adjust screen space or material values on the select asset too. Due to time which again has been another aspect that went quite poorly due to my fulltime job commitments I have had to cut quite a bit. At the end the project still meets what is required for the brief but in the future, I want to add to it, to make it even better than it was before. I also need to break a bad habit pointed out to me by a peer who codes that is my disastrous parameter naming conventions. I had a lot of problems with missing variables due to me not painting the same names through my inputs so in the future I want to break my bad habits and commit to a clearer naming scheme. This would include where it is so if a text element is in the UI it would be UI_Mesh_Name and the input in Python would be Input_UI_Mesh_Name. My only fear would be very long string names so I may also simplify it to what it is for clearer reading such a s vb_Lod_Stats for vertical box lod stats for example. It is quite too late to rewrite now as it would break all my code</p><p><strong>Final reflection:</strong></p><p>In conclusion I would consider this a semi successful project in meeting the brief but leaves enough wiggle room for future upgrades. It was also my first time writing proper documentation which I want to do more of as it was both super fun and super helpful when passing for peer feedback. For my future projects I want to make a few more of these tools using purely python and head into Houdini to bridge the gap into more 3D based procedural tools.</p><div class=footer><div style=display:flex;justify-content:center;align-items:center;gap:10px><b>© Jesse Olchawa 2025-<script>document.write(/\d{4}/.exec(Date())[0])</script>
+</b><img src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fwww.jolchawa.site%2F&label=Website+Visitors+Counter&icon=stars&color=%236ea8fe&message=&style=for-the-badge&tz=GMT" style=width:300px;height:auto alt="Website visitors counter"></div><center>This content website cannot be utilised for any AI training or data gathering purposes!<br></b>This site is powered with <a href=https://gohugo.io/>Hugo</a> using the
+<a href=https://github.com/mrmierzejewski/hugo-theme-console/>Console Theme</a>.</center></div></div></body></html>
