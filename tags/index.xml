@@ -1,1 +1,66 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on Jesses Tech Art Folio</title><link>https://debug-blog.jolchawa.site/tags/</link><description>Recent content in Tags on Jesses Tech Art Folio</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 18 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://debug-blog.jolchawa.site/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>Chosen</title><link>https://debug-blog.jolchawa.site/tags/chosen/</link><pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate><guid>https://debug-blog.jolchawa.site/tags/chosen/</guid><description/></item><item><title>Personal</title><link>https://debug-blog.jolchawa.site/tags/personal/</link><pubDate>Thu, 17 Sep 2026 11:26:33 +0100</pubDate><guid>https://debug-blog.jolchawa.site/tags/personal/</guid><description/></item><item><title>Houdini</title><link>https://debug-blog.jolchawa.site/tags/houdini/</link><pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate><guid>https://debug-blog.jolchawa.site/tags/houdini/</guid><description/></item><item><title>Scripted Tool</title><link>https://debug-blog.jolchawa.site/tags/scripted-tool/</link><pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate><guid>https://debug-blog.jolchawa.site/tags/scripted-tool/</guid><description/></item><item><title>Unreal Engine</title><link>https://debug-blog.jolchawa.site/tags/unreal-engine/</link><pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate><guid>https://debug-blog.jolchawa.site/tags/unreal-engine/</guid><description/></item><item><title>Python</title><link>https://debug-blog.jolchawa.site/tags/python/</link><pubDate>Mon, 06 Apr 2026 00:00:00 +0000</pubDate><guid>https://debug-blog.jolchawa.site/tags/python/</guid><description/></item><item><title>Shaders</title><link>https://debug-blog.jolchawa.site/tags/shaders/</link><pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate><guid>https://debug-blog.jolchawa.site/tags/shaders/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Tags on Jesses Tech Art Folio</title>
+		<link>https://debug-blog.jolchawa.site/tags/</link>
+		<description>Recent content in Tags on Jesses Tech Art Folio</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 18 Sep 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://debug-blog.jolchawa.site/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Chosen</title>
+				<link>https://debug-blog.jolchawa.site/tags/chosen/</link>
+				<pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+				<guid>https://debug-blog.jolchawa.site/tags/chosen/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Personal</title>
+				<link>https://debug-blog.jolchawa.site/tags/personal/</link>
+				<pubDate>Thu, 17 Sep 2026 11:26:33 +0100</pubDate>
+				<guid>https://debug-blog.jolchawa.site/tags/personal/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Houdini</title>
+				<link>https://debug-blog.jolchawa.site/tags/houdini/</link>
+				<pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+				<guid>https://debug-blog.jolchawa.site/tags/houdini/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Scripted Tool</title>
+				<link>https://debug-blog.jolchawa.site/tags/scripted-tool/</link>
+				<pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+				<guid>https://debug-blog.jolchawa.site/tags/scripted-tool/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Unreal Engine</title>
+				<link>https://debug-blog.jolchawa.site/tags/unreal-engine/</link>
+				<pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+				<guid>https://debug-blog.jolchawa.site/tags/unreal-engine/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Python</title>
+				<link>https://debug-blog.jolchawa.site/tags/python/</link>
+				<pubDate>Mon, 06 Apr 2026 00:00:00 +0000</pubDate>
+				<guid>https://debug-blog.jolchawa.site/tags/python/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Shaders</title>
+				<link>https://debug-blog.jolchawa.site/tags/shaders/</link>
+				<pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
+				<guid>https://debug-blog.jolchawa.site/tags/shaders/</guid>
+				<description></description>
+			</item>
+	</channel>
+</rss>
