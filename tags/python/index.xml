@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Python on Jesses Tech Art Folio</title>
+		<link>https://debug-blog.jolchawa.site/tags/python/</link>
+		<description>Recent content in Python on Jesses Tech Art Folio</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 06 Apr 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://debug-blog.jolchawa.site/tags/python/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Texture Utility Tool - PyQt</title>
+				<link>https://debug-blog.jolchawa.site/blog/texture-utility-tool-pyqt/</link>
+				<pubDate>Mon, 06 Apr 2026 00:00:00 +0000</pubDate>
+				<guid>https://debug-blog.jolchawa.site/blog/texture-utility-tool-pyqt/</guid>
+				<description>&lt;p&gt;This post is about a Python based texture utility tool that can rescale, convert file types, pack and split channels of texture maps.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Outsource Asset Validator for UE</title>
+				<link>https://debug-blog.jolchawa.site/blog/outsource-asset-validator-for-ue/</link>
+				<pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
+				<guid>https://debug-blog.jolchawa.site/blog/outsource-asset-validator-for-ue/</guid>
+				<description>&lt;p&gt;This post documents the creation of a asset manager that bakes, validates and imports outsourced meshes with shaders setup into Unreal Engine.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Panopto Caption Translator with Python</title>
+				<link>https://debug-blog.jolchawa.site/blog/caption-translator-with-python/</link>
+				<pubDate>Wed, 26 Nov 2025 00:00:00 +0000</pubDate>
+				<guid>https://debug-blog.jolchawa.site/blog/caption-translator-with-python/</guid>
+				<description>&lt;p&gt;Easily and qucikly translate captions from videos (Panopto) using Python&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Convert Images w/Python Script</title>
+				<link>https://debug-blog.jolchawa.site/blog/convert-images-w-python-script/</link>
+				<pubDate>Sat, 12 Jul 2025 00:00:00 +0000</pubDate>
+				<guid>https://debug-blog.jolchawa.site/blog/convert-images-w-python-script/</guid>
+				<description>&lt;p&gt;This post documents a older image converter I created using Python and TKinter.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Visual Mesh Debugger </title>
+				<link>https://debug-blog.jolchawa.site/blog/visual-mesh-debugger-tool/</link>
+				<pubDate>Tue, 08 Apr 2025 11:58:34 +0100</pubDate>
+				<guid>https://debug-blog.jolchawa.site/blog/visual-mesh-debugger-tool/</guid>
+				<description>&lt;p&gt;This post goes through the development of a visual debugging tool using Python for inspecting static meshes in real-time in Unreal Engine.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

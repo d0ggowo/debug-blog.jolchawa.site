@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Unreal Engine on Jesses Tech Art Folio</title>
+		<link>https://debug-blog.jolchawa.site/tags/unreal-engine/</link>
+		<description>Recent content in Unreal Engine on Jesses Tech Art Folio</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 18 Apr 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://debug-blog.jolchawa.site/tags/unreal-engine/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Little Ashton - House Generator</title>
+				<link>https://debug-blog.jolchawa.site/blog/little-ashton/</link>
+				<pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+				<guid>https://debug-blog.jolchawa.site/blog/little-ashton/</guid>
+				<description>&lt;p&gt;This post follows the development of a dynamic building generator using Houdini, inspired by Exp33 and Atomfall.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Dungeon Delve Project</title>
+				<link>https://debug-blog.jolchawa.site/blog/dungeon-delve-project/</link>
+				<pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+				<guid>https://debug-blog.jolchawa.site/blog/dungeon-delve-project/</guid>
+				<description>&lt;p&gt;This post is about a quick diorama project that sets up modular kits, animated portal effects and post process in Unreal Engine.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Robot Dog Project</title>
+				<link>https://debug-blog.jolchawa.site/blog/robot-dog-project/</link>
+				<pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
+				<guid>https://debug-blog.jolchawa.site/blog/robot-dog-project/</guid>
+				<description>&lt;p&gt;This post documents the retoplogy, rigging, skinning and shader work for creating a game ready animated robot dog.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Outsource Asset Validator for UE</title>
+				<link>https://debug-blog.jolchawa.site/blog/outsource-asset-validator-for-ue/</link>
+				<pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
+				<guid>https://debug-blog.jolchawa.site/blog/outsource-asset-validator-for-ue/</guid>
+				<description>&lt;p&gt;This post documents the creation of a asset manager that bakes, validates and imports outsourced meshes with shaders setup into Unreal Engine.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Winter Shader Musuem</title>
+				<link>https://debug-blog.jolchawa.site/blog/winter-shader-musuem/</link>
+				<pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
+				<guid>https://debug-blog.jolchawa.site/blog/winter-shader-musuem/</guid>
+				<description>&lt;p&gt;This project showcases a variety of winter shaders for Unreal Engine 5.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>PCG Scatter Tool Breakdown</title>
+				<link>https://debug-blog.jolchawa.site/blog/pcg-scatter-tool-breakdown/</link>
+				<pubDate>Sun, 24 Aug 2025 00:00:00 +0000</pubDate>
+				<guid>https://debug-blog.jolchawa.site/blog/pcg-scatter-tool-breakdown/</guid>
+				<description>&lt;p&gt;This post documents building a PCG scattering tool for foliage and repetitive assets.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Pipe Generator Tool</title>
+				<link>https://debug-blog.jolchawa.site/blog/pipe-generator-tool-full-blog/</link>
+				<pubDate>Mon, 16 Jun 2025 00:00:00 +0000</pubDate>
+				<guid>https://debug-blog.jolchawa.site/blog/pipe-generator-tool-full-blog/</guid>
+				<description>&lt;p&gt;This post follows the development of a procedural copper pipe tool using Houdini for Unreal Engine.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Visual Mesh Debugger </title>
+				<link>https://debug-blog.jolchawa.site/blog/visual-mesh-debugger-tool/</link>
+				<pubDate>Tue, 08 Apr 2025 11:58:34 +0100</pubDate>
+				<guid>https://debug-blog.jolchawa.site/blog/visual-mesh-debugger-tool/</guid>
+				<description>&lt;p&gt;This post goes through the development of a visual debugging tool using Python for inspecting static meshes in real-time in Unreal Engine.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

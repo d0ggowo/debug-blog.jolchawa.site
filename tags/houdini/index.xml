@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Houdini on Jesses Tech Art Folio</title>
+		<link>https://debug-blog.jolchawa.site/tags/houdini/</link>
+		<description>Recent content in Houdini on Jesses Tech Art Folio</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 18 Apr 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://debug-blog.jolchawa.site/tags/houdini/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Little Ashton - House Generator</title>
+				<link>https://debug-blog.jolchawa.site/blog/little-ashton/</link>
+				<pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+				<guid>https://debug-blog.jolchawa.site/blog/little-ashton/</guid>
+				<description>&lt;p&gt;This post follows the development of a dynamic building generator using Houdini, inspired by Exp33 and Atomfall.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Sky Island Generator</title>
+				<link>https://debug-blog.jolchawa.site/blog/sky-island-generator/</link>
+				<pubDate>Mon, 30 Mar 2026 00:00:00 +0000</pubDate>
+				<guid>https://debug-blog.jolchawa.site/blog/sky-island-generator/</guid>
+				<description>&lt;p&gt;This post is about the creation of a sky island generator in Houdini inspired by the Legend of Zelda Tears of the Kingdom&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Pipe Generator Tool</title>
+				<link>https://debug-blog.jolchawa.site/blog/pipe-generator-tool-full-blog/</link>
+				<pubDate>Mon, 16 Jun 2025 00:00:00 +0000</pubDate>
+				<guid>https://debug-blog.jolchawa.site/blog/pipe-generator-tool-full-blog/</guid>
+				<description>&lt;p&gt;This post follows the development of a procedural copper pipe tool using Houdini for Unreal Engine.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
